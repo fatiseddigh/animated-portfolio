@@ -1,0 +1,38 @@
+@import "./../../../styles/app.scss";
+.navbar {
+  height: 80px;
+  scroll-snap-align: center;
+  .container {
+    max-width: 1366px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop {
+      justify-content: space-around;
+    }
+
+    .logo {
+      width: 70px;
+      height: 60px;
+    }
+    .socials {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      img {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        &:hover {
+          width: 18px;
+          height: 18px;
+          transform: rotate(-8deg);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
