@@ -4,14 +4,14 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <section>Hero</section>
+      <section id="Homepage">Hero</section>
       <section>Parallax</section>
-      <section>Services</section>
+      <section id="Services">Services</section>
       <section>Parallax</section>
-      <section>Portfolio1</section>
+      <section id="Portfolio">Portfolio1</section>
       <section>Portfolio2</section>
       <section>Portfolio3</section>
-      <section>Contact</section>
+      <section id="Contact">Contact</section>
     </div>
   );
 };
