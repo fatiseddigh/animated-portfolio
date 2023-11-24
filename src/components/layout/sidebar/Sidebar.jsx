@@ -13,7 +13,7 @@ const variants = {
     },
   },
   closed: {
-    clipPath: "circle(20px at 40px 35px)",
+    clipPath: "circle(20px at 40px 32px)",
     transition: {
       delay: 0.5,
       type: "spring",
@@ -27,8 +27,8 @@ const Sidebar = () => {
 
   return (
     <motion.div className="sidebar" animate={open ? "open" : "closed"}>
-      <motion.div className="bg" variants={variants}>
-        <Links />
+      <motion.div className={open ? "bg" : "dNone"} variants={variants}>
+        {open && <Links />}
       </motion.div>
       <ToggleButton setOpen={setOpen} />
     </motion.div>
