@@ -1,3 +1,4 @@
+import Contact from "./components/contact/Contact";
 import Intro from "./components/intro/Intro";
 import Navbar from "./components/layout/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
@@ -22,7 +23,14 @@ const App = () => {
         <Parallax type="portfolio" />
       </section>
       <Portfolio />
-      <section id="Contact">Contact</section>
+      <section
+        id="Contact"
+        // style={{
+        //   background: "linear-gradient(180deg,  #082b2a,#041615, #040d12)",
+        // }}
+      >
+        <Contact />
+      </section>
     </div>
   );
 };
