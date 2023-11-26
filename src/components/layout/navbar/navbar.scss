@@ -17,6 +17,9 @@
     .logo {
       width: 70px;
       height: 60px;
+      @include mobile {
+        padding-left: 15px;
+      }
     }
     .socials {
       display: flex;

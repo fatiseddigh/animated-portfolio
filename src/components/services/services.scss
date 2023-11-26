@@ -1,3 +1,4 @@
+@import "../../styles/app.scss";
 .services {
   background: linear-gradient(180deg, #040d12, #041615, #082b2a);
   height: 100%;
@@ -10,6 +11,11 @@
     align-items: center;
     flex: 1;
     gap: 20px;
+    @include mobile {
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+    }
     p {
       text-align: right;
       font-size: 16px;
@@ -20,6 +26,9 @@
       width: 450px;
       border: none;
       border-top: 0.5px solid #d5a58c62;
+      @include mobile {
+        width: 300px;
+      }
     }
   }
   .titleContainer {
@@ -27,23 +36,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include mobile {
+      width: 100%;
+    }
 
     .title {
       display: flex;
       align-items: center;
       gap: 20px;
-
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
       img {
         width: 170px;
         height: 50px;
         border-radius: 50px;
         object-fit: cover;
+        @include mobile {
+          width: 200px;
+          height: 50px;
+        }
       }
 
       h1 {
         font-size: 71px;
         font-weight: 100;
         color: #a6bfb6;
+        @include mobile {
+          font-size: 36px;
+        }
       }
 
       button {
@@ -55,6 +78,11 @@
         font-size: 19px;
         cursor: pointer;
         color: #fef6f1;
+        @include mobile {
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+        }
       }
     }
   }
@@ -64,16 +92,30 @@
     max-width: 1150px;
     margin: auto;
 
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+    }
+
     .box {
       padding: 25px;
       border: 0.5px solid #d5a58c62;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @include mobile {
+        border: none;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+      }
 
       p {
         font-size: 15px;
         color: #a6bfb6;
+        @include mobile {
+          display: none;
+        }
       }
 
       button {
@@ -83,6 +125,14 @@
         background-color: orange;
         border: none;
         cursor: pointer;
+        @include mobile {
+          background-color: transparent;
+          border: 1px solid orange;
+          border-radius: 5px;
+          color: orange;
+          width: 50%;
+          padding: 5px;
+        }
       }
     }
   }
